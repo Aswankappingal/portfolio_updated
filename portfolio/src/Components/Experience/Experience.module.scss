@@ -1,0 +1,98 @@
+@import '../../styles/variables.scss';
+
+.experience {
+  padding: $spacing-lg $spacing-md;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  .section-header {
+    margin-bottom: $spacing-md;
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      border-left: 4px solid $text-primary;
+      padding-left: $spacing-sm;
+    }
+  }
+
+  .experience-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+  }
+
+  .exp-item {
+    padding: $spacing-md;
+    border: 1px solid $border-color;
+    background-color: #0a0a0a;
+    transition: $transition-smooth;
+
+    &:hover {
+      border-color: $text-primary;
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: $spacing-sm;
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .role {
+        h3 {
+          font-size: 1.5rem;
+          font-weight: 700;
+          color: $text-primary;
+        }
+        h4 {
+          font-size: 1.1rem;
+          color: $text-secondary;
+          font-weight: 500;
+        }
+      }
+
+      .meta {
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        
+        @media (max-width: 768px) {
+          text-align: left;
+        }
+
+        .period {
+          font-weight: 700;
+          color: $text-primary;
+        }
+        .location {
+          font-size: 0.8rem;
+          color: $text-secondary;
+        }
+      }
+    }
+
+    .exp-points {
+      list-style: none;
+      
+      li {
+        font-size: 1rem;
+        color: $text-secondary;
+        margin-bottom: 0.5rem;
+        padding-left: 1.5rem;
+        position: relative;
+
+        &::before {
+          content: "→";
+          position: absolute;
+          left: 0;
+          color: $text-primary;
+        }
+      }
+    }
+  }
+}

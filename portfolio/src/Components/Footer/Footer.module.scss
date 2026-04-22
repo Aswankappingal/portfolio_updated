@@ -1,0 +1,33 @@
+@import '../../styles/variables.scss';
+
+.footer {
+  padding: $spacing-md;
+  border-top: 1px solid $border-color;
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $text-secondary;
+    font-size: 0.9rem;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: $spacing-sm;
+      text-align: center;
+    }
+  }
+
+  .social-links {
+    display: flex;
+    gap: $spacing-md;
+
+    a {
+      &:hover {
+        color: $text-primary;
+      }
+    }
+  }
+}

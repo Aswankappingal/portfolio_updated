@@ -1,0 +1,112 @@
+@import '../../styles/variables.scss';
+
+.about {
+  padding: $spacing-lg $spacing-md;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  .section-header {
+    margin-bottom: $spacing-md;
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      border-left: 4px solid $text-primary;
+      padding-left: $spacing-sm;
+    }
+  }
+
+  .about-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: $spacing-lg;
+
+    @media (max-width: 992px) {
+      grid-template-columns: 1fr;
+    }
+
+    .about-text {
+      .summary {
+        font-size: 1.1rem;
+        color: $text-secondary;
+        margin-bottom: $spacing-md;
+        line-height: 1.8;
+      }
+
+      .education {
+        h3 {
+          margin-bottom: $spacing-sm;
+          font-size: 1.5rem;
+          font-weight: 700;
+        }
+
+        .edu-item {
+          margin-bottom: $spacing-sm;
+          padding-left: $spacing-sm;
+          border-left: 1px solid $border-color;
+
+          h4 {
+            font-size: 1.1rem;
+            color: $text-primary;
+          }
+          p {
+            color: $text-secondary;
+            font-size: 0.9rem;
+          }
+          span {
+            font-size: 0.8rem;
+            color: $text-secondary;
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+
+    .skills {
+      h3 {
+        margin-bottom: $spacing-sm;
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      .skills-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+
+        @media (max-width: 480px) {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .skill-cat {
+        h4 {
+          font-size: 0.9rem;
+          text-transform: uppercase;
+          color: $text-secondary;
+          margin-bottom: 0.5rem;
+          border-bottom: 1px solid $border-color;
+          padding-bottom: 0.2rem;
+        }
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+
+        li {
+          padding: 0.2rem 0;
+          font-size: 0.95rem;
+          color: $text-primary;
+          
+          &::before {
+            content: "•";
+            margin-right: 0.5rem;
+            color: $text-secondary;
+          }
+        }
+      }
+    }
+  }
+}

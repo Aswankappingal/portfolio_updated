@@ -1,0 +1,17 @@
+// Color Palette
+$bg-color: #000000;
+$text-primary: #ffffff;
+$text-secondary: #a0a0a0;
+$accent-color: #ffffff; // Keeping it white/gray for a minimal look, or can use a subtle highlight
+$border-color: #333333;
+
+// Typography
+$font-main: 'Inter', system-ui, -apple-system, sans-serif;
+
+// Spacing
+$spacing-sm: 1rem;
+$spacing-md: 2rem;
+$spacing-lg: 4rem;
+
+// Transitions
+$transition-smooth: all 0.3s ease;

@@ -1,0 +1,127 @@
+@import '../../styles/variables.scss';
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: $spacing-lg $spacing-md;
+  padding-top: 100px;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+
+  .hero-content {
+    max-width: 900px;
+    z-index: 2;
+    text-align: left;
+  }
+
+  .subheader-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 2rem;
+
+    .line {
+      height: 1px;
+      background-color: $text-secondary;
+      display: inline-block;
+    }
+
+    .subheader {
+      font-size: 0.9rem;
+      color: $text-secondary;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      font-weight: 500;
+      margin: 0;
+    }
+  }
+
+  .main-title {
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+    h1 {
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      font-size: clamp(4rem, 15vw, 10rem);
+      line-height: 0.9;
+      margin: 0;
+      text-transform: none;
+      
+      &.white {
+        color: $text-primary;
+      }
+
+      &.grey {
+        color: rgba($text-primary, 0.2); // Very subtle grey/low opacity as in image
+      }
+    }
+  }
+
+  .description {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: $text-secondary;
+    margin-bottom: 4rem;
+    max-width: 650px;
+    font-weight: 400;
+
+    br {
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+  }
+
+  .hero-btns {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .cta-button {
+    background: transparent;
+    color: $text-primary;
+    border: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 0;
+    font-family: inherit;
+
+    .arrow {
+      font-size: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover {
+      .arrow {
+        transform: translateX(10px);
+      }
+    }
+  }
+}
+
+// Background glow effect
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+  filter: blur(50px);
+  z-index: 1;
+  pointer-events: none;
+}

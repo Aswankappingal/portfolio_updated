@@ -1,0 +1,46 @@
+@import '../../styles/variables.scss';
+
+.services {
+  padding: $spacing-lg $spacing-md;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  .section-header {
+    margin-bottom: $spacing-md;
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      border-left: 4px solid $text-primary;
+      padding-left: $spacing-sm;
+    }
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: $spacing-md;
+
+    .service-card {
+      padding: $spacing-md;
+      border: 1px solid $border-color;
+      background-color: #0a0a0a;
+      transition: $transition-smooth;
+
+      &:hover {
+        border-color: $text-primary;
+      }
+
+      h3 {
+        margin-bottom: $spacing-sm;
+        font-size: 1.5rem;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+      }
+
+      p {
+        color: $text-secondary;
+      }
+    }
+  }
+}

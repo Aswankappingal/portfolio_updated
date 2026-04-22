@@ -1,0 +1,76 @@
+@import '../../styles/variables.scss';
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  background-color: transparent; // Minimal look
+  z-index: 1000;
+  transition: all 0.3s ease;
+
+  .navbar-container {
+    width: 100%;
+    max-width: 1600px; // Wider container
+    margin: 0 auto;
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: $text-primary;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 3rem; // Increased gap
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @media (max-width: 992px) {
+      display: none; // Basic mobile handling
+    }
+
+    li {
+      a {
+        font-size: 0.75rem; // Smaller, elegant size
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 600;
+        color: rgba($text-primary, 0.6); // Slightly dimmed
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $text-primary;
+        }
+      }
+    }
+  }
+
+  .socials {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+
+    a {
+      color: rgba($text-primary, 0.6);
+      transition: color 0.3s ease, transform 0.3s ease;
+
+      &:hover {
+        color: $text-primary;
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
