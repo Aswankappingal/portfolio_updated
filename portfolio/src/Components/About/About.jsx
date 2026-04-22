@@ -7,12 +7,57 @@ const About = () => {
     <section id="about" className={styles.about}>
       <motion.div 
         className={styles['section-header']}
-        initial={{ opacity: 0, x: -50 }}
-        whileInView={{ opacity: 1, x: 0 }}
+        initial="hidden"
+        whileInView="visible"
         viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
+        transition={{ staggerChildren: 0.2 }}
       >
-        <h2>ABOUT ME</h2>
+        <div className={styles['subheader-wrapper']}>
+          <motion.span 
+            className={styles.line}
+            initial={{ width: 0 }}
+            whileInView={{ width: "40px" }}
+            transition={{ duration: 0.8 }}
+          />
+          <motion.p 
+            className={styles.subheader}
+            variants={{
+              hidden: { opacity: 0, y: 10 },
+              visible: { opacity: 1, y: 0 }
+            }}
+          >
+            WHO I AM
+          </motion.p>
+        </div>
+        <div className={styles['main-title']}>
+          <motion.h2 
+            className={styles.white}
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 }
+            }}
+          >
+            Think.
+          </motion.h2>
+          <motion.h2 
+            className={styles.grey}
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 }
+            }}
+          >
+            Solve.
+          </motion.h2>
+          <motion.h2 
+            className={styles.white}
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 }
+            }}
+          >
+            Evolve.
+          </motion.h2>
+        </div>
       </motion.div>
       <div className={styles['about-content']}>
         <motion.div 
