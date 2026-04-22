@@ -64,7 +64,7 @@ const Hero = () => {
         <motion.p className={styles.description} variants={itemVariants}>
           Hi, I'm Aswin.K. I build high-performance web applications <br />
           with a focus on clean code and exceptional user experience. <br />
-          Currently specializing in the MERN stack.
+          Currently specializing in the MERN stack..
         </motion.p>
 
         <motion.div className={styles['hero-btns']} variants={itemVariants}>
