@@ -22,9 +22,10 @@
   }
 
   .logo {
-    font-size: 1.1rem;
+    font-family: $font-heading;
+    font-size: 1rem;
     font-weight: 700;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     color: $text-primary;
     text-transform: uppercase;
     cursor: pointer;
@@ -32,22 +33,23 @@
 
   .nav-links {
     display: flex;
-    gap: 3rem; // Increased gap
+    gap: 2.5rem;
     list-style: none;
     margin: 0;
     padding: 0;
 
     @media (max-width: 992px) {
-      display: none; // Basic mobile handling
+      display: none;
     }
 
     li {
       a {
-        font-size: 0.75rem; // Smaller, elegant size
+        font-family: $font-main;
+        font-size: 0.7rem;
         text-transform: uppercase;
-        letter-spacing: 2px;
-        font-weight: 600;
-        color: rgba($text-primary, 0.6); // Slightly dimmed
+        letter-spacing: 3px;
+        font-weight: 500;
+        color: rgba($text-primary, 0.7);
         text-decoration: none;
         transition: color 0.3s ease;
 

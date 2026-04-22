@@ -31,9 +31,10 @@
     }
 
     .subheader {
-      font-size: 0.9rem;
+      font-family: $font-main;
+      font-size: 0.8rem;
       color: $text-secondary;
-      letter-spacing: 4px;
+      letter-spacing: 5px;
       text-transform: uppercase;
       font-weight: 500;
       margin: 0;
@@ -47,8 +48,9 @@
     gap: 0;
 
     h1 {
+      font-family: $font-heading;
       font-weight: 800;
-      letter-spacing: -0.04em;
+      letter-spacing: -0.05em;
       font-size: clamp(4rem, 15vw, 10rem);
       line-height: 0.9;
       margin: 0;
@@ -65,12 +67,14 @@
   }
 
   .description {
-    font-size: 1.25rem;
-    line-height: 1.6;
+    font-family: $font-main;
+    font-size: 1.1rem;
+    line-height: 1.8;
     color: $text-secondary;
     margin-bottom: 4rem;
     max-width: 650px;
     font-weight: 400;
+    letter-spacing: 0.5px;
 
     br {
       @media (max-width: 768px) {
